@@ -19,11 +19,11 @@ html{
     background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #3f3f3f;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #231f20;
 }
 
 /* all similar content styling codes */
@@ -71,7 +71,7 @@ section .title::after{
     bottom: -8px;
     left: 50%;
     font-size: 20px;
-    color: crimson;
+    color: #ad974f;
     padding: 0 5px;
     background: #fff;
     transform: translateX(-50%);
@@ -88,7 +88,7 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: crimson;
+    background: #ad974f;
 }
 .navbar .max-width{
     display: flex;
@@ -96,16 +96,16 @@ section .title::after{
     justify-content: space-between;
 }
 .navbar .logo a{
-    color: #fff;
+    color: #231f20;
     font-size: 35px;
     font-weight: 600;
 }
 .navbar .logo a span{
-    color: crimson;
+    color: #ad974f;
     transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
-    color: #fff;
+    color: #231f20;
 }
 .deep_logo .deep .deep_bar
 .skills_deep .deeptouch{
@@ -118,14 +118,14 @@ section .title::after{
 }
 .navbar .menu li a{
     display: block;
-    color: #fff;
+    color: #231f20;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 800;
     margin-left: 25px;
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: crimson;
+    color: #ad974f;
 }
 .navbar.sticky .menu li a:hover{
     color: #fff;
@@ -142,7 +142,7 @@ section .title::after{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: crimson;
+    background: #ad974f;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -167,61 +167,108 @@ section .title::after{
 }
 
 
+
 /* home section styling */
 .home{
     display: flex;
     background: url("images/banner.jpg") no-repeat center;
+    justify-content: center;   /* horizontal centering */
+    align-items: center;       /* vertical centering */
     height: 100vh;
-    color: #fff;
+    color: #231f20;
     min-height: 500px;
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'Ubuntu', sans-serif;
 }
+
 .home .max-width{
   width: 100%;
   display: flex;
 }
+
 .home .max-width .row{
   margin-right: 0;
 }
+
+/* NEW: translucent background panel behind home text */
+.home .home-content{
+    background: rgba(255, 255, 255, 0.25);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    text-align: center;
+    backdrop-filter: blur(2px);              /* optional glass effect */
+    -webkit-backdrop-filter: blur(6px);
+
+    min-width: 700px;
+}
+
+/* NEW: text shadow for better readability */
+.home .home-content .text-1,
+.home .home-content .text-2,
+.home .home-content .text-3{
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
 .home .home-content .text-1{
     font-size: 27px;
+    font-family: 'Fredoka', sans-serif;
 }
+
 .home .home-content .text-2{
-    font-size: 75px;
-    font-weight: 600;
-    margin-left: -3px;
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: 13px;
+    margin-left: -5px;
+    font-family: 'Press Start 2P', sans-serif;
 }
+
 .home .home-content .text-3{
-    font-size: 40px;
-    margin: 5px 0;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 13px;
+    font-family: 'Fredoka', sans-serif;
 }
+
 .home .home-content .text-3 span{
-    color: crimson;
+    color: #ad974f;
     font-weight: 500;
 }
+
 .home .home-content a{
     display: inline-block;
-    background: crimson;
+    background: #ad974f;
     color: #fff;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
     font-weight: 400;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid #ad974f;
     transition: all 0.3s ease;
 }
+
 .home .home-content a:hover{
-    color: crimson;
+    color: #ad974f;
     background: none;
 }
 
+
+
 /* about section styling */
 /*About Section by deep*/
+.about {
+    background-color: #231f20; /* example color */
+    margin-bottom: 0;
+    padding-bottom: 40px;
+}
+.about .title{
+    color: #eaeaea;
+}
+
 .about .title::after{
     content: "who i am";
+    background-color: #eaeaea;
 }
 .about .about-content .left{
     width: 45%;
@@ -237,57 +284,137 @@ section .title::after{
 }
 .about .about-content .right .text{
     font-size: 25px;
+    color: #eaeaea;
     font-weight: 600;
     margin-bottom: 10px;
 }
 .about .about-content .right .text span{
-    color: crimson;
+    color: #ad974f;
 }
 .about .about-content .right p{
     text-align: justify;
 }
 .about .about-content .right a{
     display: inline-block;
-    background: crimson;
-    color: #fff;
+    background: #ad974f;
+    color: #eaeaea;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid #ad974f;
     transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
 .about .about-content .right a:hover{
-    color: crimson;
+    color: #ad974f;
     background: none;
 }
+.mytextlater{
+    margin-top: 15px;
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 550;
+    color: #eaeaea;
+}
+.Goldentext{
+    color: #ad974f;
+    font-weight: 700;
+}
+
+
+/* works section styling */
+.works {
+    background-color: #f5f1e6; /* example color */
+}
+
+.works .title{
+    font-family: 'Press Start 2P', sans-serif;
+    margin-bottom: 80px;
+}
+
+.works-scroll {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    scroll-snap-type: x mandatory;
+}
+
+.works-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.works-scroll::-webkit-scrollbar-thumb {
+    background: #b59b5b; /* match your theme */
+    border-radius: 10px;
+}
+
+.work-card {
+    min-width: 340px;
+    background: #f5f2e8;
+    border-radius: 12px;
+    padding: 15px;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-6px);
+}
+
+.video-box {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.work-text {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
 
 /* services section styling */
 .services, .teams{
     color:#fff;
     background: #111;
 }
+.services .title{
+    font-family: 'Press Start 2P', sans-serif;
+}
 .services .title::before,
 .teams .title::before{
     background: #fff;
 }
-.services .title::after,
-.teams .title::after{
-    background: #111;
-    content: "what i provide";
-}
+
 .services .serv-content .card{
-    width: calc(33% - 20px);
-    background: #222;
+    width: calc(26% - 20px);
+    background: #131313;
     text-align: center;
     border-radius: 6px;
     padding: 50px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
 }
 .services .serv-content .card:hover{
-    background: crimson;
+    background: #ad974f;
 }
 .services .serv-content .card .box{
     transition: all 0.3s ease;
@@ -297,7 +424,7 @@ section .title::after{
 }
 .services .serv-content .card i{
     font-size: 50px;
-    color: crimson;
+    color: #ad974f;
     transition: color 0.3s ease;
 }
 .services .serv-content .card:hover i{
@@ -309,154 +436,14 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 
-/* skills section styling */
-
-.skills .title::after{
-    content: "what i know";
-}
-.skills .skills-content .column{
-    width: calc(50% - 30px);
-}
-.skills .skills-content .left .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.skills .skills-content .left p{
-    text-align: justify;
-}
-.skills .skills-content .left a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-.skills .skills-content .left a:hover{
-    color: crimson;
-    background: none;
-}
-.skills .skills-content .right .bars{
-    margin-bottom: 15px;
-}
-.skills .skills-content .right .info{
-    display: flex;
-    margin-bottom: 5px;
-    align-items: center;
-    justify-content: space-between;
-}
-.skills .skills-content .right span{
-    font-weight: 500;
-    font-size: 18px;
-}
-.skills .skills-content .right .line{
-    height: 5px;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
-}
-.skills .skills-content .right .line::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: crimson;
-}
-.skills-content .right .python::before{
-    width: 70%;
-}
-
-.skills-content .right .java::before{
-    width: 80%;
-}
-.skills-content .right .html::before{
-    width: 90%;
-}
-.skills-content .right .css::before{
-    width: 70%;
-}
-.skills-content .right .js::before{
-    width: 50%;
-}
-.skills-content .right .c::before{
-    width: 60%;
-}
-.skills-content .right .mysql::before{
-    width: 90%;
-}
-
-/* teams section styling */
-.teams .title::after{
-    content: "who with me";
-}
-.teams .carousel .card{
-    background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover{
-    background: crimson;
-}
-.teams .carousel .card .box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover .box{
-    transform: scale(1.05);
-}
-.teams .carousel .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.teams .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid crimson;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover img{
-    border-color: #fff;
-}
-.owl-dots{
-    text-align: center;
-    margin-top: 20px;
-}
-.owl-dot{
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid crimson!important;
-    transition: all 0.3s ease;
-}
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
-}
-.owl-dot.active,
-.owl-dot:hover{
-    background: crimson!important;
-}
 
 /* contact section styling */
+.contact {
+    background-color: #f5f1e6; /* example color */
+}
 .contact .title::after{
     content: "get in touch";
+    background-color: #eaeaea;
 }
 .contact .contact-content .column{
     width: calc(50% - 30px);
@@ -482,7 +469,7 @@ section .title::after{
 }
 .contact .contact-content .row i{
     font-size: 25px;
-    color: crimson;
+    color: #ad974f;
 }
 .contact .contact-content .info .head{
     font-weight: 500;
@@ -541,12 +528,12 @@ section .title::after{
   border-radius: 6px;
   cursor: pointer;
   flex-wrap: nowrap;
-  background: crimson;
-  border: 2px solid crimson;
+  background: #ad974f;
+  border: 2px solid #ad974f;
   transition: all 0.3s ease;
 }
 .right form .button-area button:hover{
-  color: crimson;
+  color: #ad974f;
   background: none;
 }
 /* footer section styling */
@@ -557,7 +544,7 @@ footer{
     text-align: center;
 }
 footer span a{
-    color: crimson;
+    color: #ad974f;
     text-decoration: none;
 }
 footer span a:hover{

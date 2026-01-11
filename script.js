@@ -35,17 +35,23 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Developer", "3D Artist", "Freelancer", "Game Developer"],
+        strings: ["Developer", "3D Artist", "Freelancer", "Game Developer", "Designer"],
         typeSpeed: 100,
         backSpeed: 60,
-        loop: true
+        loop: true,
+        onBegin: function () {
+        document.querySelector('.typing').style.fontFamily = "'Press Start 2P'";
+    }
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["Developer", "3D Artist", "Freelancer", "Game Developer"],
+        strings: ["Developer", "3D Artist", "Freelancer", "Game Developer", "Designer"],
         typeSpeed: 100,
         backSpeed: 60,
-        loop: true
+        loop: true,
+        onBegin: function () {
+        document.querySelector('.typing-2').style.fontFamily = "'Press Start 2P'";
+    }
     });
 
     // owl carousel script
